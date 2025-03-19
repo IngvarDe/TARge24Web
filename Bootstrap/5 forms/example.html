@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-5">Forms:</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Inputs</h3>
+                <form action="">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email address</label>
+                        <input 
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail"
+                        aria-describedby="emailHelp" />
+                        <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input 
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword"/>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input 
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck"/>
+                        <label class="form-check-label" for="exampleCheck">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Radio/checkboxes</h3>
+
+                <div class="form-check">
+                    <input type="checkbox"
+                    class="form-check-input"
+                    id="flexCheckDefault" 
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    id="flexCheckDefault"
+                    checked>
+                    <label class="form-check-label" for="flexCheckDefault">Checked checkbox</label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    id="flexCheckInterterminate"
+                    />
+                    <label class="form-check-label" for="flexCheckInterterminate">
+                        Interterminate checkbox
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault">
+                        Default Radio
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                    checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Default checked Radio
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault3"
+                    checked
+                    disabled
+                    />
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Default disabled checked radio
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexSwitchCheckDefault"
+                    checked
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                        Default switch checkbox input
+                    </label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexSwitchCheckDisabled"
+                    disabled
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckDisabled">
+                        Disabled switch checkbox input
+                    </label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    name="flexRadioDefault"
+                    id="flexSwitchCheckCheckedDisabled"
+                    disabled
+                    checked
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">
+                        Disabled checked switch checkbox input
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    id="inlineCheckbox1"
+                    value="option1"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox1">
+                        Inline checkbox 1
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    id="inlineCheckbox2"
+                    value="option2"
+                    />
+                    <label class="form-check-label" for="inlineCheckbox2">
+                        Inline checkbox 2
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="checkbox"
+                    class="form-check-input"
+                    id="inlineCheckbox3"
+                    value="option3"
+                    disabled
+                    />
+                    <label class="form-check-label" for="inlineCheckbox3">
+                        Inline checkbox 3 (disabled)
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    id="inlineRadio1"
+                    value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">
+                        Inline radio 1
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    id="inlineRadio2"
+                    value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">
+                        Inline radio 2
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input 
+                    type="radio"
+                    class="form-check-input"
+                    id="inlineRadio3"
+                    value="option3"
+                    disabled
+                    />
+                    <label class="form-check-label" for="inlineRadio3">
+                        Inline radio 3 (disabled)
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="my-5">Files</h3>
+
+                <div class="form-file">
+                    <input type="file" class="form-file-input" id="customFile" />
+                    <label class="form-file-label" for="customFile">
+                        <span class="form-file-text">Choose file...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+                
+                <h3 class="my-5">Range</h3>
+                <label class="form-label" for="customRange1">Example range</label>
+                <input type="range" class="form-range" id="customRange1" />
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="my-5">Validation</h3>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                        <label for="validationCustom1" class="form-label">First Name</label>
+                        <input 
+                        type="text"
+                        id="validationCustom1"
+                        class="form-control"
+                        value="Mark"
+                        required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label" for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input 
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                            />
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom3" class="form-label">
+                            City
+                        </label>
+                        <input 
+                        type="text"
+                        class="form-control"
+                        id="validationCustom3"
+                        aria-describedby="inputGroupPrepend"
+                        required
+                        />
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom4" class="form-label">State</label>
+                        <select 
+                        name="" 
+                        class="form-select"
+                        id="validationCustom4"
+                        required
+                        >
+                            <option selected disabled value="">Choose...</option>
+                            <option value="">...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom5" class="form-label">Zip</label>
+                        <input 
+                        type="text"
+                        class="form-control"
+                        id="validationCustom5"
+                        required
+                        />
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input 
+                            type="checkbox"
+                            class="form-check-input"
+                            id="invalidCheck"
+                            required
+                            />
+                            <label for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                            Submit form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
