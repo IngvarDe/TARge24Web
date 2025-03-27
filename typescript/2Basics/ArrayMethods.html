@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="car"></p>
+
+    <h1>Shift</h1>
+    <p id="carShift1"></p>
+    <p id="carShift2"></p>
+
+    <h1>UnShift</h1>
+    <p id="carUnshift1"></p>
+    <p id="carUnshift2"></p>
+
+    <h1>Delete</h1>
+    <p id="carDelete1"></p>
+    <p id="carDelete2"></p>
+
+    <h1>Pop</h1>
+    <p id="carPop1"></p>
+    <p id="carPop2"></p>
+
+    <h1>Splice</h1>
+    <p id="carSplice1"></p>
+    <p id="carSplice2"></p>
+</body>
+<script>
+    const cars = ["Volvo", "BMW", "Audi"];
+    const cars1 = ["Volvo", "BMW", "Audi"];
+    const cars2 = ["Volvo", "BMW", "Audi"];
+    let carsSize = cars.length;
+    document.getElementById("car").innerHTML = carsSize;
+
+    //võtab ära esimese elemendi 
+    document.getElementById("carShift1").innerHTML = cars;
+    cars.shift();
+    document.getElementById("carShift2").innerHTML = cars;
+
+    //lisab uue elemendi nimekirja algusesse 
+    document.getElementById("carUnshift1").innerHTML = cars;
+    cars.unshift("Flying Car");
+    document.getElementById("carUnshift2").innerHTML = cars;
+
+    //delete tekitab tühjad kohad massiivi ja siis on vastuseks undefined
+    document.getElementById("carDelete1").innerHTML = 
+    "First car is " + cars[0];
+    delete cars[0];
+    document.getElementById("carDelete2").innerHTML = 
+    "First car is " + cars[0];
+ 
+    //võtab ära viimase elemendi
+    document.getElementById("carPop1").innerHTML = cars1;
+    cars1.pop();
+    document.getElementById("carPop2").innerHTML = cars1;
+
+    //lisab juurde kaks elementi
+    document.getElementById("carSplice1").innerHTML = cars2;
+    //esimene nr on lisatava elementide stardikoht
+    cars2.splice(2, 0, "Kia", "Skoda");
+    document.getElementById("carSplice2").innerHTML = cars2;
+    
+</script>
+</html>
