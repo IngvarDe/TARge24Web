@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Objects</h1>
+    <h2>Creating an Object</h2>
+
+    <p id="demo"></p>
+    
+    <p id="human"></p>
+
+    <p id="house"></p>
+    
+    <p id="anotherPlanet"></p>
+</body>
+<script>
+    // loome objekti
+    const car = {type:"BMW", model:"X5", color:"red"};
+
+    //soovin näidata objekti
+    document.getElementById("demo").innerHTML = 
+    "The car type is " + car.model + " " + car.type;
+
+    const person = {
+        name: "Jim",
+        nickName: "Jimbo",
+        height: "188",
+        hairColor: "black"
+    };
+
+    document.getElementById("human").innerHTML = 
+    "The person name is " + person.name + " and nickname is " + person.nickName;
+
+    const houses = {};
+    houses.type = "Flat";
+    houses.height = "10";
+    houses.location = "Nõmme";
+
+    document.getElementById("house").innerHTML = 
+    "The house type is " + houses.type + " and location is " + houses.location;
+
+    const alien = {
+        id: 1234,
+        name: "X25",
+        nickName: "asd",
+        height: "184",
+        hairColor: "cyan",
+        fullname: function() {
+            return this.name + " " + this.nickName;
+        }
+    };
+
+    document.getElementById("anotherPlanet").innerHTML = alien.fullname();
+
+</script>
+</html>
