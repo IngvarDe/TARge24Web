@@ -6,7 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Palgakalkulaator</h2>
+
+    <p id="grossSalary"></p>
+
+    <p id="TaxFree"></p>
+
+    <p id="taxableIncome"></p>
+
+    <p id="incomeTax"></p>
+
+    <p id="NetSalary"></p>
+
 </body>
 <script>
 //Palga kalkulaator
@@ -23,5 +34,33 @@
 //https://www.kalkulaator.ee/et/palgakalkulaator
 //Palga arvutamise valem:
 //https://www.emta.ee/et/maksuvaba-tulu
+    let grossSalary = 1500;
+    document.getElementById("grossSalary").innerHTML = "Brutopalk: " 
+    + grossSalary.toFixed(2) + " eurot";
+
+    let TaxFree;
+    if (grossSalary <= 1200) {
+        TaxFree = 654;
+    } else if (grossSalary <= 2099) {
+        TaxFree = 654 - 0.72667 * (grossSalary - 1200)
+    } else {
+        TaxFree = 0;
+    };
+
+    document.getElementById("TaxFree").innerHTML = "Sissetulek: " +
+    TaxFree.toFixed(2) + " eurot";
+    
+    let taxableIncome = grossSalary - TaxFree;
+    document.getElementById("taxableIncome").innerHTML = "Sissetulek: " +
+    taxableIncome.toFixed(2) + " eurot";
+
+    let incomeTax = taxableIncome * 0.22;
+    document.getElementById("incomeTax").innerHTML = "Sissetulek: " +
+    incomeTax.toFixed(2) + " eurot";
+
+    let NetSalary = grossSalary - incomeTax;
+    document.getElementById("NetSalary").innerHTML = "Sissetulek: " +
+    NetSalary.toFixed(2) + " eurot";
+
 </script>
 </html>
