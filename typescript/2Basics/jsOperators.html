@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators</title>
+</head>
+<body>
+    <p>Liitmine</p>
+    <p id="add"></p>
+
+    <p>Lahutamine</p>
+    <p id="minus"></p>
+
+    <p>Jagamie</p>
+    <p id="division"></p>
+
+    <p>Korrutamine</p>
+    <p id="multiplication"></p>
+
+    <p>Jääk operaator</p>
+    <p id="reminder"></p>
+
+    <p>Lisamise operaator</p>
+    <p id="increment"></p>
+
+    <p>Pärast lisamise operaator</p>
+    <p id="incrementAfter"></p>
+</body>
+<script>
+    let y = 5;
+    let x = y + 5;
+    document.getElementById("add").innerHTML = "Tulemus on liitmisel: " + x;
+
+    let minus = y - 7;
+    document.getElementById("minus").innerHTML = "Tulemus on lahutamisel: " + minus;
+
+    let division = y / 4;
+    document.getElementById("division").innerHTML = "Tulemus on jagamisel: " + division;
+
+    let multiplication = y * 4;
+    document.getElementById("multiplication").innerHTML = "Tulemus on korrutamisel: " + multiplication;
+
+    let reminder = y % 2;
+    document.getElementById("reminder").innerHTML = "Tulemus on jäägi puhul: " + reminder;
+
+    let increment = ++y;
+    document.getElementById("increment").innerHTML = "Tulemus on lisamise puhul: " + increment;
+
+    let inc = y++;
+    document.getElementById("incrementAfter").innerHTML = "Tulemus on pärast lisamise operaatori puhul: " + inc;
+
+
+</script>
+</html>
