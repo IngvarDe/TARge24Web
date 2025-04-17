@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="numberMethods"></p>
+
+    <p id="exponential"></p>
+
+    <p id="date"></p>
+
+    <p id="isInteger"></p>
+
+    <p id="parseFloat"></p>id
+
+    <p id="maxValue"></p>
+
+    <p id="maxSafeInt"></p>
+
+</body>
+<script>
+    let q = 345;
+    document.getElementById("numberMethods").innerHTML = 
+    q.toString() + "<br>" +
+    (345).toString() + "<br>" +
+    (300 + 45).toString();
+
+    let w = 5.678;
+    document.getElementById("exponential").innerHTML = 
+    w.toExponential() + "<br>" +
+    w.toExponential(2) + "<br>" +
+    w.toExponential(4) + "<br>" +
+    w.toExponential(6);
+
+    let e = new Date("1970-01-02");
+    document.getElementById("date").innerHTML = Number(e);
+
+    document.getElementById("isInteger").innerHTML = 
+    Number.isInteger(10) + "<br>" + Number.isInteger(10.8);
+
+    document.getElementById("parseFloat").innerHTML = 
+    Number.parseFloat("20") + "<br>" +
+    Number.parseFloat("20.88") + "<br>" +
+    Number.parseFloat("20 50 90") + "<br>" +
+    Number.parseFloat("20 asd") + "<br>" +
+    Number.parseFloat("asd 20");
+
+
+    document.getElementById("parseFloat").innerHTML = 
+    Number.parseInt("20") + "<br>" +
+    Number.parseInt("-20") + "<br>" +
+    Number.parseInt("-20.55") + "<br>" +
+    Number.parseInt("20.88") + "<br>" +
+    Number.parseInt("20 50 90") + "<br>" +
+    Number.parseInt("20 asd") + "<br>" +
+    Number.parseInt("asd 20");
+
+    //number propertys
+    let a = Number.MAX_VALUE;
+    document.getElementById("maxValue").innerHTML = a;
+
+    let s = Number.MAX_SAFE_INTEGER;
+    document.getElementById("maxSafeInt").innerHTML = s;
+
+</script>
+</html>

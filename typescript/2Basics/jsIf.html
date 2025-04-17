@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="tereTulemast">Tere õhtust!</p>
+
+    <p id="teretamine"></p>
+
+    <p id="randomLink"></p>
+    
+</body>
+<script>
+    if (new Date().getHours() < 18) {
+        document.getElementById("tereTulemast").innerHTML = "Tere tulemast!"
+    }
+
+    // tehke sama asi nagu eelmine kord, aga p alla ei kirjuta midagi
+    //tuleb kasutada if ja else
+    const time = new Date().getHours();
+    let text;
+    if (time < 9) {
+        text = "Tere hommikust";
+    } else if (time <20) {
+        text = "Tere päevast";
+    } else {
+        text = "Tere ööd";
+    }
+    document.getElementById("teretamine").innerHTML = text;
+
+    //random
+    if(Math.random() < 0.5) {
+        text = "<a href='https://www.tthk.ee/'> TTHK </a>";
+    } else {
+        text = "<a href='https://www.youtube.com/'> YouTube </a>";
+    }
+    document.getElementById("randomLink").innerHTML = text;
+
+</script>
+</html>
