@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="buildingTypes"></p>
+
+    <p id="types"></p>
+
+    <p id="someIteration"></p>
+    
+</body>
+<script>
+    const buildingTypes = ["Suvila", "Korter", "Maja", "Villa", "Mõis"];
+
+    let result = "";
+    for (let i = 0; i < buildingTypes.length; i++) {
+        result += buildingTypes[i] + "<br>";
+    }
+    document.getElementById("buildingTypes").innerHTML = result;
+
+
+    let q = 0;
+    let len = buildingTypes.length;
+    let result1 = "";
+    for (; q < buildingTypes.length; ) {
+        result1 += buildingTypes[q] + "<br>";
+        q++;
+    }
+    document.getElementById("types").innerHTML = result1;
+    
+    //foreach
+    const numbers = [34, 6, 1, 89, 98];
+    let result2 = "";
+    numbers.forEach(someIteration);
+    document.getElementById("someIteration").innerHTML = result2;
+
+    function someIteration(value, index, array) {
+        result2 += value + "<br>";
+    }
+
+</script>
+</html>
