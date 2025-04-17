@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="numbers"></p>
+
+    <p id="largeNumbers"></p>
+
+    <p id="wrongCalculation"></p>
+
+    <p id="correctCalculation"></p>
+
+    <p id="divide"></p>
+
+    <p id="addString"></p>
+
+    <p id="add"></p>
+
+    <p id="wrongDivide"></p>
+
+    <p id="isNanDivide"></p>
+
+    <p id="infinityNumber"></p>
+
+</body>
+<script>
+    let q = 123e5;
+    let w = 123e-5;
+    document.getElementById("numbers").innerHTML= q + "<br>" + w;
+
+    let e = 999999999999999;
+    let r = 9999999999999999;
+    document.getElementById("largeNumbers").innerHTML= e + "<br>" + r;
+
+    let t = 0.2 + 0.1;
+    document.getElementById("wrongCalculation").innerHTML= "0.2 + 0.1 = " + t;
+
+    //kuidas saab probleemi lahendada???
+    let y = (0.2*10 + 0.1*10) / 10;
+    document.getElementById("correctCalculation").innerHTML= "0.2 + 0.1 = " + y;
+
+    let a = "100";
+    let s = "10";
+    let d = a / s;
+    document.getElementById("divide").innerHTML= d;
+
+    let f = a + s;
+    document.getElementById("addString").innerHTML= f;
+
+    let g = 100;
+    let h = 10;
+    let j = g + h;
+    document.getElementById("add").innerHTML= j;
+
+    let k = 100;
+    let l = "Computer";
+    let z = k / l;
+    document.getElementById("wrongDivide").innerHTML= z;
+    document.getElementById("isNanDivide").innerHTML= isNaN(z);
+
+    let infinityNumber = 2;
+    let txt = "";
+    while (infinityNumber != Infinity) {
+        infinityNumber = infinityNumber * infinityNumber;
+        txt = txt + infinityNumber + "<br>";
+    }
+    document.getElementById("infinityNumber").innerHTML= txt;
+
+</script>
+</html>
