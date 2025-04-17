@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="getMonth"></p>
+
+    <p id="getDay"></p>
+
+</body>
+
+<script>
+    let month;
+    switch (new Date().getMonth()) {
+        case 0:
+            month = "Jaanuar"
+            break;
+        case 1:
+            month = "Veebruar"
+            break;
+        case 2:
+            month = "M'rts"
+            break;
+        case 3:
+            month = "Aprill"
+            break;
+        case 4:
+            month = "Mai"
+            break;
+        case 5:
+            month = "Juuni"
+            break;
+    }
+
+    document.getElementById("getMonth").innerHTML = "T'na on " + month;
+
+    //Kui on neljapäev ja reede, siis ütleb: kohe on nv
+    //Kui on laupäev ja pühapäev, siis ütleb: On nädalavahetus
+
+    let day;
+    switch (new Date().getDay()) {
+        case 3:
+        case 4:
+            day = "Kohe on nv";
+            break;
+
+        case 5:
+        case 6:
+            day = "Nüüd on nv";
+            break;
+
+        default:
+            day = "Ootan nv";
+    }
+    document.getElementById("getDay").innerHTML = day;
+
+</script>
+</html>
