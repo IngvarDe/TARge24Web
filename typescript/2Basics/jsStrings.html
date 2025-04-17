@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>indexOf() ja lastIndexOf() tagastavad -1, kui teksti ei ole leitud</p>
+    <p id="someText"></p>
+
+    <p id="searchText"></p>
+
+    <p>teha match-ga üks sõna otsing</p>
+    <p id="someArray"></p>
+
+    <p>Otsib kõik ja sõnad ülesse ja loendab need ära</p>
+    <p id="twoTimesJa"></p>
+
+    <p id="dogText"></p>
+
+    <p id="includeText"></p>
+</body>
+
+<script>
+    let someText = "Mul on sinine auto ja on esiratta veoga";
+    let locateWord = someText.lastIndexOf("ja");
+    document.getElementById("someText").innerHTML = locateWord;
+
+    let searchText = someText.search(/ja/);
+    document.getElementById("searchText").innerHTML = searchText;
+
+    const someArray = someText.match("on");
+    document.getElementById("someArray").innerHTML = someArray.length + " " + someArray;
+
+    //teha selliset tulemust: 2 on,on
+    const twoTimesJa = someText.match(/on/g); //kui soovin, et ei oleks case sensitive, siis g asemel gi
+    document.getElementById("twoTimesJa").innerHTML = twoTimesJa.length + " " + twoTimesJa;
+
+    let dogText = "Koerad on toredad. Neile meeldib palju õues liikuda. Koerad on populaarsed"
+    const iterator = dogText.matchAll("Koer");
+    document.getElementById("dogText").innerHTML = Array.from(iterator);
+
+    document.getElementById("includeText").innerHTML = dogText.includes("on");
+
+
+</script>
+</html>
