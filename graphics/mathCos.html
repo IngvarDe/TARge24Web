@@ -11,18 +11,17 @@
 </body>
 
 <script>
-    const xArray = ["Italy", "Germany", "Estonia", "Sweden", "Finland"];
-    const yArray = [55, 30, 40, 15, 16];
+    let exp = "Math.cos(x)";
 
-    const data = [{
-        x:yArray,
-        y:xArray,
-        type:"bar",
-        orientation: "h",
-        marker: {color:"rgba(0,0,255,0.6)"}
-    }];
-    const layout = {title:"World cranberry production"};
+    const xValues = [];
+    const yValues = [];
+    for (let x = 0; x <= 10; x += 0.2) {
+        xValues.push(x);
+        yValues.push(eval(exp));
+    }
 
+    const data = [{x:xValues, y:yValues, mode:"markers"}];
+    const layout = {title: "y = " + exp};
     Plotly.newPlot("linePlot", data, layout);
 </script>
 </html>
